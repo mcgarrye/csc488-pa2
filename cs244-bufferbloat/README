@@ -1,0 +1,11 @@
+Eric McGarry
+PA2 - CSC458
+
+Instruction: Run 'sudo ./run.sh'
+
+1. The large buffer (100 packets) will have more packets waiting in the queue instead of being dropped so TCP continues sending packets with a larger window. This causes bloating in the buffer. The smaller buffer (20packets) on the other hand will drop the packets sooner and TCP will then reduce the window, thus decreasing the overhead by resending a few packets instead of a large wait queue.
+2. eth0 has (maximum) transmit queue length of 1000 packets, with MTA of 1500 bytes. The max time would be (1000 * 1500 * 8)/(100) = 12ms
+3. I don't know!
+4. - Decrease TCP timeout so the packets would appear dropped in long queues 
+    - Manually adjust buffers to accommodate the local networks needs
+
